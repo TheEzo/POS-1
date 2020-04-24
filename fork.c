@@ -30,16 +30,17 @@ int main(int argc, char **argv)
                     args[i-1] = argv[i];
                 args[i-1] = NULL;
                 execv(args[0], args);
+                sleep(10);
             }
         }
         else{
             wait(&status_c);
-            exit_print(label_p, status_c, pid_c);
+            exit_print(label_c, status_c, pid_c);
         }
     }
     else{
         wait(&status_p);
-        exit_print(label_gp, status_p, pid_p);
+        exit_print(label_p, status_p, pid_p);
     }
     return 0;
 }

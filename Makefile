@@ -7,6 +7,9 @@ default:
 	${CC} ${CFLAGS} -o ${PROG} ${SRC}
 
 fork:
+	./fork
 
 clean:
 	rm -f fork core*
+
+.PHONY: fork
